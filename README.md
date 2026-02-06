@@ -1,4 +1,4 @@
-GitHub Pages Link: https://alexandralheureuxece.github.io/lab-1-tejanvesh
+GitHub Pages Link: [https://alexandralheureuxece.github.io/lab-1-tejanvesh](https://alexandralheureuxece.github.io/lab-1-Tejanvesh/)
 
 How to Run Locally:
 1. Clone the repository in the IDE of your choice
