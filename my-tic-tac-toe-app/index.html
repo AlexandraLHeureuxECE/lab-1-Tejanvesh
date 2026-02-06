@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic-Tac-Toe</h1>
+            <p class="turn-indicator" id="turnIndicator" aria-live="polite">Select Game Mode</p>
+        </header>
+
+        <!-- Mode Selection -->
+        <div class="mode-selection" id="modeSelection">
+            <h2>Choose Game Mode</h2>
+            <div class="mode-buttons">
+                <button class="mode-btn" id="twoPlayerBtn" type="button">
+                    <span class="mode-icon">👥</span>
+                    <span class="mode-label">Two Players</span>
+                    <span class="mode-desc">Play with a friend</span>
+                </button>
+                <button class="mode-btn" id="vsComputerBtn" type="button">
+                    <span class="mode-icon">🤖</span>
+                    <span class="mode-label">vs Computer</span>
+                    <span class="mode-desc">Play against the bot</span>
+                </button>
+            </div>
+        </div>
+
+        <main class="game-area hidden" id="gameArea">
+            <div class="game-board" id="gameBoard" role="grid" aria-label="Tic-Tac-Toe game board">
+                <div class="cell" data-index="0" tabindex="0" role="gridcell" aria-label="Cell 1, empty"></div>
+                <div class="cell" data-index="1" tabindex="0" role="gridcell" aria-label="Cell 2, empty"></div>
+                <div class="cell" data-index="2" tabindex="0" role="gridcell" aria-label="Cell 3, empty"></div>
+                <div class="cell" data-index="3" tabindex="0" role="gridcell" aria-label="Cell 4, empty"></div>
+                <div class="cell" data-index="4" tabindex="0" role="gridcell" aria-label="Cell 5, empty"></div>
+                <div class="cell" data-index="5" tabindex="0" role="gridcell" aria-label="Cell 6, empty"></div>
+                <div class="cell" data-index="6" tabindex="0" role="gridcell" aria-label="Cell 7, empty"></div>
+                <div class="cell" data-index="7" tabindex="0" role="gridcell" aria-label="Cell 8, empty"></div>
+                <div class="cell" data-index="8" tabindex="0" role="gridcell" aria-label="Cell 9, empty"></div>
+            </div>
+
+            <div class="message-container" id="messageContainer" aria-live="assertive">
+                <p id="gameMessage" class="game-message"></p>
+            </div>
+
+            <div class="game-controls">
+                <button class="restart-btn" id="restartBtn" type="button">
+                    <span class="btn-icon">↻</span>
+                    Restart Game
+                </button>
+                <button class="change-mode-btn" id="changeModeBtn" type="button">
+                    <span class="btn-icon">⚙</span>
+                    Change Mode
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Use <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> to navigate • <kbd>Enter</kbd> to place mark</p>
+            <p class="current-mode" id="currentMode"></p>
+        </footer>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
